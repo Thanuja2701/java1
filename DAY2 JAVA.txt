@@ -1,0 +1,214 @@
+DAY 2
+
+TWO STRING COMPARITION
+
+TYPE:1
+
+WITHOUT TRUE
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+         String s1=input.nextLine();
+         String s2=new String("siva");
+         if(s1.equals(s2))
+         System.out.println("equal");
+         else
+          System.out.println("not equal");
+         
+         
+    }
+}
+
+TYPE:2
+
+ WITH TRUE
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+         String s1=input.nextLine();
+         String s2=new String("siva");
+         System.out.println(s1.equals(s2));
+         if(s1.equals(s2))
+         System.out.println("equal");
+         else
+          System.out.println("not equal");
+         
+         
+    }
+}
+
+
+
+THREE STRINGS COMPARITION
+
+
+class Main {
+    public static void main(String[] args) {
+      
+        String teacher="java is fun";
+        String s1="java is fun";
+         String s2=new String("java is hard");
+         System.out.println(teacher==s1);
+         System.out.println(s1==s2);
+         System.out.println(teacher.equals(s2));
+    
+         }
+}
+
+LENGTH
+
+class Main {
+    public static void main(String[] args) {
+       String s1="thanuja kumar";
+       System.out.println(s1.length());
+       for(int i=0;i<s1.length();i++){
+       System.out.print(s1.charAt(i));
+       }
+         }
+}
+
+SUBSTRING
+
+public class SubstringExample {
+    public static void main(String[] args) {
+       String str="java progamming";
+      System.out.println("substring from index 5:" +str.substring(5));
+      System.out.println("substring from o to 4:" +str.substring(0,4));
+       
+         }
+}
+
+REVERSE STRING
+
+
+class Main {
+    public static void main(String[] args) {
+       String s1="thanuja kumar";
+       for(int i=s1.length()-1;i>=0;i--){
+       System.out.println(s1.charAt(i));
+       }
+         }
+}
+
+INDEX
+
+class Main {
+    public static void main(String[] args) {
+        String str="Java Programming";
+        System.out.println("index of 'Prog':"+str.indexOf("Prog"
+        ));
+         System.out.println("index of 'z':"+str.indexOf("z"
+        ));
+}
+}
+OUTPUT:
+
+index of 'Prog':5
+index of 'z':-1
+
+REPLACE AND UPPERCASE
+
+class Main {
+    public static void main(String[] args) {
+        String s1="Jxvx Progrxmming";
+        System.out.println(s1.replace('x','a'));
+        System.out.println(s1.toUpperCase());
+    }
+}
+
+OUTPUT:
+
+Java Programming
+JXVX PROGRXMMING
+
+
+SESITIVE-INSENSITIVE
+
+class Main {
+    public static void main(String[] args) {
+        String s1="Java";
+        String s2="java";
+        System.out.println("case sensitive equals"+s1.equals(s2));
+        System.out.println("case insensitive equals"+s1.equalsIgnoreCase(s2));
+    }
+}
+
+OUTPUT:
+case sensitive equals  false
+case insensitive equals  true
+
+TRIMMING THE WHITE SPACE:
+
+class Main {
+    public static void main(String[] args) {
+        String s1=" Java ";
+        System.out.println("Before trim:["+s1+"]");
+        System.out.println("After trim:["+s1.trim()+"]");
+    }
+}
+
+OUTPUT:
+
+Before trim:[ Java ]
+After trim:[Java]
+
+USING INTERN:
+
+class Main {
+    public static void main(String[] args) {
+        String s1=new String("Java Developer");
+        String s2="Java Developer";
+        String s3=s1.intern();
+        System.out.println(s1==s2);
+        System.out.println(s2==s3);
+    }
+}
+
+OUTPUT:
+
+false
+true
+
+
+
+class Main {
+    public static void main(String[] args) {
+        String str="Java Python";
+       System.out.println("Contains 'Java':"+str.contains("Java"));
+        System.out.println("Contains 'Python':"+str.contains("Python"));
+    }
+}
+
+
+Contains 'Java':true
+Contains 'Python':true
+
+
+
+
+class Main {
+    public static void main(String[] args) {
+        String str="123,345,789";
+        String[] arr=str.split(",");
+       //System.out.println(arr[i]);
+            int max=0;
+            for(int i=0;i<arr.length;i++){
+                if(Integer.parseInt(arr[i])>max)
+                {
+                    max=Integer.parseInt(arr[i]);
+                }
+            }
+         System.out.println(max);   
+        
+    }
+    
+}
+
+
+OUTPUT:
+
+789
