@@ -1,0 +1,306 @@
+DAY3:
+
+1>>using chardata type:
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+         Scanner input = new Scanner(System.in);
+         char s1=input.nextLine().charAt(0);
+        System.out.println("char:"+s1);
+    }
+}
+
+output:
+
+xyz
+char:x
+
+2>>oops concept
+
+class Main {
+    public static void main(String[] args) {
+        
+        System.out.println(objectoriented.a);
+        objectoriented.Display();
+    
+    }
+}
+class objectoriented{
+    static int a=10;
+    public static void Display(){
+        System.out.println("static method");
+    }
+}
+
+output:
+
+10
+static method
+
+=== Code Execution Successful ===
+
+
+static  and nonstatic value:
+
+class Main {
+    public static void main(String[] args) {
+        objectoriented ref=new objectoriented();
+        System.out.println("non static var:"+ref.name);
+         System.out.println("non static var:"+ref.rollno);
+        System.out.println("static var:"+objectoriented.a);
+        objectoriented.Display();
+    
+    }
+}
+class objectoriented{
+    String name="java";
+    String rollno="2332j37";
+    
+    static int a=10;
+    
+    public static void Display(){
+        System.out.println("static method");
+    }
+}
+
+
+output:
+
+non static var:java
+non static var:2332j37
+static var:10
+static method
+
+
+CONTRUCTOR:
+
+
+class Main {
+    public static void main(String[] args) {
+      sample ref=new sample();
+    }
+}
+class sample{
+  sample(){
+      System.out.println("default contructor");
+  }
+    
+    }
+
+output:
+
+
+default contructor
+
+
+
+
+class Main {
+    public static void main(String[] args) {
+      sample ref=new sample("BMW",5);
+       sample ref1=new sample("thor",9);
+       System.out.println(ref.carname);
+        System.out.println(ref.carmodel);
+         System.out.println(ref1.carname);
+          System.out.println(ref1.carmodel);
+    }
+}
+class sample{
+      String carname;
+      int carmodel;
+      sample(String carname,  int carmodel){
+          this.carname=carname;
+          this.carmodel=carmodel;
+      
+      System.out.println("default contructor");
+  }  
+}
+
+output:
+
+default contructor
+default contructor
+BMW
+5
+thor
+9
+
+
+encapsulation:
+
+
+class Main {
+    public static void main(String[] args) {
+    account acc=new account("thanu",20000); 
+    System.out.println(acc.getaccholder());
+    System.out.println(acc.getbalance());
+    }
+}
+class account{
+    private String accholder;
+    private int balance;
+     account(String accholder,int balance){
+         this.accholder=accholder;
+         this.balance=balance;
+     }
+     public String getaccholder(){
+         return accholder;
+     }
+    public int getbalance(){
+        return balance;
+   
+     }
+}
+
+output:
+
+thanu
+20000
+
+
+encapslation: replace name
+
+
+class Main {
+    public static void main(String[] args) {
+    account acc=new account("priya",20000); 
+    System.out.println(acc.getaccholder());
+    System.out.println(acc.getbalance());
+    acc.setaccholder("thanu");
+    System.out.println("updated accholder name:"+acc.getaccholder());
+    }
+}
+class account{
+    private String accholder;
+    private int balance;
+     account(String accholder,int balance){
+         this.accholder=accholder;
+         this.balance=balance;
+     }
+     public String getaccholder(){
+         return accholder;
+     }
+    public int getbalance(){
+        return balance;
+        
+   
+     }
+     public void setaccholder(String accholder){
+         this.accholder=accholder;
+     }
+}
+      
+    
+output:
+
+priya
+20000
+updated accholder name:thanu
+
+
+
+
+
+
+class Main {
+    public static void main(String[] args) {
+    account acc=new account("priya",20000); 
+    System.out.println(acc.getaccholder());
+    System.out.println(acc.getbalance());
+    acc.setaccholder("thanu");
+    System.out.println("updated accholder name:"+acc.getaccholder());
+     acc.setbalance(acc.getbalance()-2000);
+    System.out.println("updated balance:"+acc.getbalance());
+    
+    }
+}
+class account{
+    private String accholder;
+    private int balance;
+     account(String accholder,int balance){
+         this.accholder=accholder;
+         this.balance=balance;
+     }
+     public String getaccholder(){
+         return accholder;
+     }
+    public int getbalance(){
+        return balance;
+        
+   
+     }
+     public void setaccholder(String accholder){
+         this.accholder=accholder;
+     }
+     public void setbalance(int balance){
+         this.balance=balance;
+     
+}
+}
+ 
+output:
+
+priya
+20000
+updated accholder name:thanu
+updated balance:18000     
+
+
+
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+    Account acc=new Account("Priya",20000);  
+    System.out.println("Accountholders name:"+acc.getaccholder());
+    System.out.println("balance:"+acc.getbalance());
+    acc.setaccholder("shreya");
+    System.out.println("Updated accholder name:"+acc.getaccholder());
+    System.out.println("enter credit amount:");
+    int amount=input.nextInt();
+    System.out.println("balance:"+(acc.getbalance()+amount));
+      System.out.println("enter withdraw amount:");
+      int amt=input.nextInt();
+     System.out.println("balance:"+(acc.getbalance()-amt));
+}
+}
+class Account{
+  private String accholder;
+  private int balance;
+  Account(String accholder,int balance){
+      this.accholder=accholder;
+      this.balance=balance;
+  }
+    public String getaccholder(){
+        return accholder;
+    }
+    public int getbalance(){
+        return balance;
+    }
+    public void setaccholder(String accholder){
+        this.accholder=accholder;
+    }
+    public void setbalance(int amount){
+        if(amount>0)
+        balance+=amount;
+        System.out.println("deposited successfully:"+balance);
+    }
+}
+
+
+output:
+
+Accountholders name:Priya
+balance:20000
+Updated accholder name:shreya
+enter credit amount:
+100
+balance:20100
+enter withdraw amount:
+300
+balance:19700
+
+=== Code Execution Successful ===
+    
